@@ -10,3 +10,7 @@ To use this library:
 
 The GPS on the MKR GPS Shield can be managed using the Serial1 interface at 9600 8n1. On that serial port you receive the raw messages that can be read using the syntax specified by the [NMEA standard](http://freenmea.net/docs). You can manage the board with an I2C connection or through the header pins to an underlying MKR board. The library supports transparently each set up and you just need to specify the mode you are using with the proper begin() parameter.
 
+### Use on AVR MCU (by gpb01)
+
+This version of the library has been modified to be compatible also with AVR architecture with "level shifter" for the I2C (*the MKRGPS board operates at 3.3V*). On Arduino UNO you can use only the I2C connection or the "Serial" (*Serial1 is NOT available on ATmega328P*), on other AVR MCU with Serial1 port, you can use both the I2C or the Serial1. In any case always remember the use of "level shifter" since, as indicated, the board works at 3.3V.
+

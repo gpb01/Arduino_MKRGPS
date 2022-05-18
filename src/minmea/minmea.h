@@ -23,6 +23,13 @@ extern "C" {
 #include <minmea_compat.h>
 #endif
 
+#ifdef AVR
+  struct timespec {
+    unsigned long   tv_sec;        /* seconds */
+    unsigned long   tv_nsec;       /* nanoseconds */
+  };
+#endif
+
 #define MINMEA_MAX_LENGTH 80
 
 enum minmea_sentence_id {

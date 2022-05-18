@@ -17,11 +17,6 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-// Useful info on NMEA data: https://www.gpsinformation.org/dale/nmea.htm
-
-extern "C" {
-  #include "minmea/minmea.h"
-}
 
 // #define GPS_DEBUG
 

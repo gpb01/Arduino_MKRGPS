@@ -22,6 +22,16 @@
 
 #include <Arduino.h>
 
+// Useful info. on NMEA data: https://www.gpsinformation.org/dale/nmea.htm
+
+extern "C" {
+  #include "minmea/minmea.h"
+}
+
+#if defined (__AVR_ATmega328P__)
+#define Serial1 Serial
+#endif
+
 #include "utility/SerialDDC.h"
 
 enum
